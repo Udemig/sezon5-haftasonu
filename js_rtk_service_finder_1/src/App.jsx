@@ -14,6 +14,7 @@ import useApi from "./hooks/useApi";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setCategories } from "./redux/categorySlice";
+import LoginPage from "./pages/login-page";
 
 function App() {
   const api = useApi();
@@ -97,6 +98,7 @@ function App() {
         <Route path="category/:slug" element={<CategoryDetailPage />} />
         <Route path="service/:slug" element={<ServiceDetailPage />} />
         <Route path="blog/:slug" element={<BlogDetailPage />} />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
 
       <Footer />
