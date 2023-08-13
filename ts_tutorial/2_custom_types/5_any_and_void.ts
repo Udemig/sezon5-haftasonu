@@ -1,3 +1,5 @@
+// Önem derecesi: 5.5
+
 /*
 >> `any` type <<
 
@@ -20,16 +22,14 @@ hale gelebilir.
 
 */
 
-
 let name_3: any = "test";
 
 name_3 = true;
 
 name_3 = {
-    firstname: "test",
-    lastname: "foo"
-}
-
+  firstname: "test",
+  lastname: "foo",
+};
 
 ///////////////////////////////////////////////////////
 /*
@@ -44,11 +44,11 @@ void'in kelime anlamı geçersiz, hükümsüz, boşluk anlamlarına gelir.
 */
 
 function printHello_1(name: string): void {
-    console.log("Merhaba " + name);
+  console.log("Merhaba " + name);
 }
 
 function helloText_1(name: string): string {
-    return "Merhaba " + name
+  return "Merhaba " + name;
 }
 
 printHello_1("emre");
@@ -56,5 +56,3 @@ printHello_1("nurullah");
 printHello_1("emine");
 printHello_1("yaren");
 printHello_1("dünya");
-
-

@@ -1,3 +1,5 @@
+// Önem derecesi: 10
+
 /* Bir değişkenin türünü belirlemek için değişken isminden sonra
 iki nokta üstüste yazılır ve sonra türün ismi yazılır. Standart
 türler aşağıda belirtilmiştir. */

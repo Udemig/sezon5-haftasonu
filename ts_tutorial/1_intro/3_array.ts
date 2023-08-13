@@ -1,3 +1,5 @@
+// Önem derecesi: 10
+
 /* Dizi tanımlamak için türün sonuna içi boş dizi ifadesi eklenir.
 Örneğin aşağıda elemanları sadece string olabilen bir dizi
 tanımlanmıştır. Artık bu diziye sadece string atanabilir.

@@ -1,3 +1,5 @@
+// Önem derecesi: 7
+
 /* Bazı verlerin miktarı hiçbir zaman değişmez. Örneğin gün isimleri, ay isimleri gibi.
 Bu tarz sayılabilen ama değişmeyen dataları ifade etmek için enum kullanılır. Zaten enum
 ismi enumeration (saymak) ifadesinin kısaltılmışıdır.
@@ -75,7 +77,7 @@ console.log(">>>  turkeyFirstDay string:", Days[turkeyFirstDay]);
 sınıfa kayıt olduklarını ve hangi tarihte kayıt olduklarını tutan
 bir type oluşturun ve bunu bir değişkende kullanın. */
 
-enum SchoolClass {
+enum SchoolClass_1 {
   Class_1A,
   Class_2A,
   Class_2B,
@@ -84,25 +86,27 @@ enum SchoolClass {
   Class_3C,
 }
 
-type StudentType = {
+type StudentType_3 = {
   name: string;
   lastname: string;
-  school_class: SchoolClass;
+  school_class: SchoolClass_1;
   register_year: number;
-  register_month: Months;
+  register_month: string;
   register_day: number;
 };
 
-const udemig_ioo_students: StudentType[] = [];
+const udemig_ioo_students: StudentType_3[] = [];
 
 udemig_ioo_students.push({
   name: "nurullah",
   lastname: "bedir",
-  school_class: SchoolClass.Class_3B,
+  school_class: SchoolClass_1.Class_3B,
   register_day: 1,
-  register_month: Months.April,
+  register_month: Months[Months.April],
   register_year: 2023,
 });
+
+console.log(">>> udemig_ioo_students:", udemig_ioo_students);
 
 /* Aslında mantıksal olarak herşeyi (evet herşeyi) stringlerle ifade edebiliriz.
 Ama farklı data türlerinin farklı problemleri daha iyi çözebilmesinden dolayı

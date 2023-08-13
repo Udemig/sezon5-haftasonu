@@ -23,7 +23,7 @@ parametre opsiyonel olmalı. */
 
 type CombineFullnameFnType_2 = (
   name: string,
-  middleName?: string,
+  middleName?: string, // undefined
   lastname?: string
 ) => string;
 

@@ -36,7 +36,7 @@ type StudentType = {
   gender: GenderType;
 };
 
-let students: StudentType[] = [
+let students: StudentType_3[] = [
   {
     name: "ahmet",
     surname: "test",

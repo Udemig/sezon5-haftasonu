@@ -1,3 +1,5 @@
+// Önem derecesi: 9
+
 /*
 `union` type
 
@@ -16,7 +18,6 @@ null. Başka bir örnek olarak da string veya string dizisi.
 
 */
 
-
 // Sadece spesifik bir değişken için union type tanımlamak:
 let age_1: number | string;
 
@@ -26,9 +27,8 @@ age_1 = "teenager";
 age_1 = 47;
 age_1 = "middle age";
 
-age_1 = "ahmet"
+age_1 = "ahmet";
 age_1 = 3.14159;
-
 
 // union type'ları ayrı bir type olarak tanımlamak:
 type NumberOrStringType = number | string;
@@ -37,35 +37,40 @@ let age_2: NumberOrStringType;
 age_2 = 84;
 age_2 = "old people";
 
-
 // Çok miktardaki type'larla beraber kullanılması:
 type NullableStringOrNumber = null | number | string;
 
 let birthday_1: NullableStringOrNumber = null;
 birthday_1 = 1989;
-birthday_1 = "01.01.2000"
-birthday_1 = "1989/06/23"
-
+birthday_1 = "01.01.2000";
+birthday_1 = "1989/06/23";
 
 // Değerleri unionlarla birleştirerek kullanalım.
-type GenderUnionType = "male" | "female" | "unknown" | "not selected"
+type GenderUnionType = "male" | "female" | "unknown" | "not selected";
 
-let example_patient_gender_1: GenderUnionType = "male"
+let example_patient_gender_1: GenderUnionType = "male";
 
 // Buradaki çıktı "string" olacaktır. Çünkü kod çalışırken javascripte
 // dönüştürülerek çalıştırılır. Bu yüzden bunun türü JS'deki uygun bir
 // tür olarak gösterilir.
-console.log("typeof example_patient_gender_1: ", typeof example_patient_gender_1);
+console.log(
+  "typeof example_patient_gender_1: ",
+  typeof example_patient_gender_1
+);
 
+type IrrationalNumberType =
+  | "Pi Number"
+  | "Euler Number"
+  | "Square 2"
+  | 3.14159
+  | 2.718281828
+  | 1.41;
 
-type IrrationalNumberType = "Pi Number" | "Euler Number" | "Square 2" | 3.14159 | 2.718281828 | 1.41;
-
-let irrational_number_1: IrrationalNumberType = "Square 2"
+let irrational_number_1: IrrationalNumberType = "Square 2";
 console.log(">>> typeof irrational_number_1:", typeof irrational_number_1);
 
 irrational_number_1 = 3.14159;
 console.log(">>> typeof irrational_number_1:", typeof irrational_number_1);
-
 
 /* Normalde her değişkenin type'ını belirtmek lazım. Ama eğer belirtmezsek
 o değişkenin türü atanan değerin türü olmuş olur. Örneğin aşağıdaki
@@ -80,5 +85,3 @@ console.log(">>>  example_variable:", example_variable);
 
 // example_variable = "test"; // hata
 example_variable = 20;
-
-

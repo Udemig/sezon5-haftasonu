@@ -1,3 +1,5 @@
+// Önem derecesi: 10
+
 console.log("merhaba typescript");
 
 /* Bir değişkene ilk değer verdiğimizde artık o değişken sadece o TÜRDEN
