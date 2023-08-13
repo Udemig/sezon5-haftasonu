@@ -100,6 +100,46 @@ console.log(
   )
 );
 
+/*
+type MapFnType_1 = (
+  callbackFn: (item: any, index: number, original_arr: any[]) => any,
+  arr: any[]
+) => any[];
+*/
+
+const mapFn_2: MapFnType_1 = (
+  callbackFn: (item: any, index: number, original_arr: any[]) => any,
+  arr: any[]
+): any[] => {
+  // bu kısım farklı olabilir çünkü burası implementasyon kısmı, tanımlama kısmı değil
+  let new_arr: any[] = [];
+
+  let i = 0;
+  while (i < arr.length) {
+    new_arr.push(callbackFn(arr[i], i, arr));
+
+    i++;
+  }
+
+  return new_arr;
+};
+
+console.log(
+  mapFn_2(
+    (item, index, orig_arr) => {
+      console.log("Şuanki eleman: ", item);
+      console.log("Sonraki eleman: ", orig_arr[index + 1]);
+      console.log("Son eleman: ", orig_arr[orig_arr.length - 1]);
+
+      return item * item;
+    },
+    [5, 10, 15, 20]
+  )
+);
+
+// Ödev: mapFn_3 fonksiyonunu implement ediniz. Burada döngü olarak
+// arr parametresinin forEach() fonksiyonunu kullanın.
+
 //const example_arr_1 = ["foo", "bar", "baz"];
 //example_arr_1.map((item, index, original_arr) => {
 //  return item * 2;
