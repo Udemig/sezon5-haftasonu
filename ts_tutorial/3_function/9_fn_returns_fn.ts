@@ -1,3 +1,5 @@
+// Önem derecesi: 10
+
 /* Fonksiyon dönderen fonkisyonlar:
 Bazı durumlarda fonksiyonlardan fonksiyon dönderilmesi gerekebilir.
 Bu ihtiyaç genellikle bir kütüphane yazdığımızda veya dışarıdan erişilmemesi
@@ -69,7 +71,7 @@ type ExampleFnType_3 = (
 dönen fonksiyona da parametre olarak bir string ifade girilen ve dönüş
 türünün de number olduğu bir fonksiyon türü tanımlayın. */
 // cevap:
-type ExampleFnType_4 = () => (param1: string) => number;
+type ExampleFnType_5 = () => (param1: string) => number;
 
 ///////////////////////////////////////////////
 console.log("----------------------- useState ---------------------");

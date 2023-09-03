@@ -1,3 +1,5 @@
+// Önem derecesi: 7.5
+
 /* Object Oriented Programming (OOP)
 
 Bilgisayarlar ilk çıktıkları dönemde yazılan programlar davranış tabanlı

@@ -1,3 +1,5 @@
+// Önem derecesi: 7.5
+
 /* OOP'de property ve methodların erişim belirteçleri vardır. Üç adet erişim
 belirteci vardır. Bunlar public, protected ve private'dır.
 

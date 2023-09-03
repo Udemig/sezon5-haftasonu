@@ -1,3 +1,5 @@
+// Önem derecesi: 7.5
+
 /* Getter ve Setter:
 
 Normalde class'ların property'lerini public olarak belirtirsek heryerden

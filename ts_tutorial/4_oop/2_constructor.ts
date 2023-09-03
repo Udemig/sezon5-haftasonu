@@ -1,3 +1,5 @@
+// Önem derecesi: 7.5
+
 /* Objelerin özelliklerini yani property'lerini sonradan set edebiliriz.
 Fakat çoğu durumda instance oluşturma esnasında bu property'leri belirlemek
 gerekir. Yani bir diğer ifadeyle objeyi initialize etmemiz gerekir. Bunu
