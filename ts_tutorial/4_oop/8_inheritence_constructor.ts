@@ -1,3 +1,5 @@
+// Önem derecesi: 8
+
 /* Constructor'larda durum biraz farklı. Nihayetinde bu da bir method
 ama özel bir method olduğu için bazı kurallara göre override edebiliriz.
 Bu kurallar şunlardır:
