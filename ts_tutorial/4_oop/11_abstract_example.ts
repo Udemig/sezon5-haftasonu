@@ -104,3 +104,37 @@ class FileBasedOperation extends AbstractDatabaseOperation {
     throw new Error("Method not implemented.");
   }
 }
+
+abstract class Cell_1 {
+  public id: string;
+  public type: string;
+
+  public abstract move();
+}
+
+class TerliksiHayvan extends Cell_1 {
+  public move() {
+    console.log("Anten vasıtasıyla hareket ediyorum.");
+  }
+
+  public swim() {
+    console.log("TErliksi hayvan yüzüyor.");
+  }
+}
+
+class Akyuvar extends Cell_1 {
+  public move() {
+    console.log("Uzayıp kısalarak solucan gibi hareket ediyorum.");
+  }
+
+  public eat_enemy() {
+    console.log("Düşmanı yiyor.");
+  }
+}
+
+const terliksi_hayvan_1 = new TerliksiHayvan();
+terliksi_hayvan_1.move();
+terliksi_hayvan_1.move();
+
+const akyuvar_1 = new Akyuvar();
+akyuvar_1.move();
