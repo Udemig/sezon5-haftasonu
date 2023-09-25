@@ -1,4 +1,5 @@
 import { ICarProps } from '../../types';
+import { generateImage } from '../../utils';
 
 interface DeailModalProps {
   isOpen: boolean;
@@ -29,7 +30,7 @@ const DetailModal = ({
               {/* büyük */}
               <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                 <img
-                  src="/hero.png"
+                  src={generateImage(car)}
                   className="h-full mx-auto object-contain"
                 />
               </div>
@@ -38,19 +39,19 @@ const DetailModal = ({
                 <div className="relative w-full h-24 bg-primary-blue-100 rounded-lg">
                   <img
                     className="h-full mx-auto object-contain"
-                    src="/hero.png"
+                    src={generateImage(car, '29')}
                   />
                 </div>
                 <div className="relative w-full h-24 bg-primary-blue-100 rounded-lg">
                   <img
                     className="h-full mx-auto object-contain"
-                    src="/hero.png"
+                    src={generateImage(car, '33')}
                   />
                 </div>
                 <div className="relative w-full h-24 bg-primary-blue-100 rounded-lg">
                   <img
                     className="h-full mx-auto object-contain"
-                    src="/hero.png"
+                    src={generateImage(car, '13')}
                   />
                 </div>
               </div>

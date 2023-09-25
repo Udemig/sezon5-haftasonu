@@ -3,6 +3,8 @@ import { ICarProps } from '../../types';
 import CustomButton from '../CustomButton';
 import CarInfo from './CarInfo';
 import DetailModal from './DetailModal';
+import { generateImage } from '../../utils';
+import { motion } from 'framer-motion';
 
 type CardProps = {
   car: ICarProps;
@@ -10,9 +12,12 @@ type CardProps = {
 
 const Card = ({ car }: CardProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
   return (
-    <div className="car-card group">
+    <motion.div
+      initial={{ scale: 0.5 }}
+      whileInView={{ scale: 1 }}
+      className="car-card group"
+    >
       {/* başlık */}
       <h2 className="car-card__content-title">
         {car.make} {car.model}
@@ -30,7 +35,7 @@ const Card = ({ car }: CardProps) => {
 
       <div className="w-full h-40 my-3 object-contain">
         <img
-          src="/hero.png"
+          src={generateImage(car)}
           className="w-full h-full object-contain"
         />
       </div>
@@ -43,7 +48,7 @@ const Card = ({ car }: CardProps) => {
             icon="/steering-wheel.svg"
           />
           <CarInfo
-            title={car.drive.toUpperCase()}
+            title={car.drive?.toUpperCase()}
             icon="/steering-wheel.svg"
           />
           <CarInfo
@@ -68,7 +73,7 @@ const Card = ({ car }: CardProps) => {
         closeModal={() => setIsOpen(false)}
         car={car}
       />
-    </div>
+    </motion.div>
   );
 };
 

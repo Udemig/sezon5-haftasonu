@@ -1,4 +1,5 @@
 import CustomButton from './CustomButton';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   // TODO Daha sonra implent et
@@ -26,7 +27,13 @@ const Hero = () => {
       </div>
 
       <div className="w-100 flex justify-center">
-        <img src="/hero.png" className="img-fluid object-contain" />
+        <motion.img
+          initial={{ translateX: 200 }}
+          whileInView={{ translateX: 0 }}
+          transition={{ duration: 1 }}
+          src="/hero.png"
+          className="img-fluid object-contain"
+        />
       </div>
     </div>
   );

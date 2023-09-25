@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
-import CustomButton from '../components/CustomButton';
 import Hero from '../components/Hero';
 import { fetchCars } from '../utils';
 import { ICarProps } from '../types';
 import Card from '../components/Card';
 import ShowMore from '../components/ShowMore';
 import { useSearchParams } from 'react-router-dom';
+import SearchBar from '../components/Filters/SearchBar';
+import CustomFilter from '../components/Filters/CustomFilter';
+import { fuels, years } from '../constants';
 
 const MainPage = () => {
   // arama parametrelerine erişim sağlar
@@ -17,7 +19,10 @@ const MainPage = () => {
 
   // parametreler her değiştiğinde yeniden api isteği at
   useEffect(() => {
-    fetchCars(limit)
+    //  url'deki bütün parametreli bir objeye aktar
+    const paramsObj = Object.fromEntries(params.entries());
+
+    fetchCars(paramsObj)
       .then((data: ICarProps[]) => setCars(data))
       .catch(() => alert('Verileri çekerken bir hata oluştu'));
   }, [params]);
@@ -40,7 +45,14 @@ const MainPage = () => {
         </section>
 
         {/* filtreler */}
-        <section></section>
+        <section className="home__filters">
+          <SearchBar />
+
+          <div className="home__filter-container">
+            <CustomFilter title="Yakıt Tipi" options={fuels} />
+            <CustomFilter title="Üretim Yılı" options={years} />
+          </div>
+        </section>
 
         {/* araba listesi */}
         {isDataEmpty ? (

@@ -22,3 +22,8 @@ export interface ICarProps {
   transmission: string;
   year: number;
 }
+
+export interface IOption {
+  label: string;
+  value: string;
+}
